@@ -28,7 +28,7 @@ if (mobileLanding) {
 
 function updateScale() {
   const viewportWidth = document.documentElement.clientWidth;
-  if (viewportWidth > 900 && viewportWidth < 1920) {
+  if (viewportWidth > 900) {
     root.style.setProperty("--page-scale", String(viewportWidth / 1920));
   } else {
     root.style.setProperty("--page-scale", "1");
