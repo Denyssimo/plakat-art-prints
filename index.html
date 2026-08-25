@@ -1,0 +1,356 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Plakat — limited art prints for loud walls." />
+    <title>Plakat — Art Prints</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="site-shell">
+      <section class="hero" id="home">
+        <div class="hero-lines" aria-hidden="true">
+          <img src="./assets/lines-hero-a.svg" alt="" />
+          <img src="./assets/lines-hero-b.svg" alt="" />
+        </div>
+        <img class="dark-texture" src="./assets/paper-dark.png" alt="" />
+
+        <header class="topbar">
+          <a class="brand brand--light" href="#home" aria-label="Plakat home">
+            <img src="./assets/globe.svg" alt="" />
+            <span>Plakat</span>
+          </a>
+          <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="./drops.html">Posters</a>
+            <a href="#collections">Collections</a>
+            <a href="#story" data-about-open>About</a>
+            <a href="#quality">Journal</a>
+            <a href="#footer">Contact</a>
+          </nav>
+          <a class="cart-link" href="#drops">Cart (0)</a>
+        </header>
+
+        <div class="hero-copy">
+          <h1>Posters</h1>
+          <h2>for loud walls</h2>
+          <p>Limited art prints, bold wall pieces, and visual stories made to bring mood, texture, and personality into your space.</p>
+          <div class="hero-actions">
+            <a class="button button--light button--large" href="#drops">
+              <span>Shop prints</span><img src="./assets/arrow-dark.svg" alt="" />
+            </a>
+            <a class="button button--ghost button--large" href="#drops">View drops</a>
+          </div>
+        </div>
+
+        <div class="hero-art" aria-label="A collage of monochrome and Bauhaus-inspired posters" role="img">
+          <div class="hero-bauhaus"><img src="./assets/hero-collage.png" alt="" /></div>
+          <img class="hero-tape" src="./assets/tape-09.png" alt="" />
+          <div class="hero-light"><img class="hero-light-print" src="./assets/poster-paper.png" alt="" /><img class="hero-light-texture" src="./assets/texture.png" alt="" /></div>
+          <div class="hero-abstract"><img class="hero-abstract-print" src="./assets/poster-paper.png" alt="" /></div>
+          <img class="hero-clip" src="./assets/tape-mark.png" alt="" />
+        </div>
+
+        <div class="marquee" aria-label="15% off your first order">
+          <div class="marquee-track">
+            <span>15% off your first order</span><span>15% off your first order</span><span>15% off your first order</span><span>15% off your first order</span><span>15% off your first order</span>
+          </div>
+        </div>
+      </section>
+
+      <section class="paper-section drops" id="drops">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <div class="section-guides" aria-hidden="true">
+          <img class="guide-v guide-v--short" src="./assets/line-vertical.svg" alt="" />
+          <img class="guide-h" src="./assets/line-horizontal.svg" alt="" />
+          <img class="guide-plus" src="./assets/plus-dark.svg" alt="" />
+        </div>
+        <header class="section-heading section-heading--compact">
+          <h2>Latest Drops</h2>
+          <p>A curated selection of limited prints, bold graphics, and wall pieces made to shape the mood of your space.</p>
+        </header>
+        <div class="filters-row">
+          <div class="filters" aria-label="Filter prints">
+            <button class="filter active" type="button">All prints</button>
+            <button class="filter" type="button">Typography</button>
+            <button class="filter" type="button">Abstract</button>
+            <button class="filter" type="button">Architecture</button>
+            <button class="filter" type="button">Minimal</button>
+          </div>
+          <a class="outline-link" href="./drops.html">Explore full drops<img src="./assets/arrow-card.svg" alt="" /></a>
+        </div>
+        <div class="rail-scroller product-scroller" id="product-scroller" tabindex="0" aria-label="Scroll through poster products">
+          <div class="product-rail">
+          <article class="product-card" data-category="typography">
+            <img class="product-image" src="./assets/drop-noisy.png" alt="Noisy Silence poster in a sunlit interior" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Typography</span><h3>Noisy Silence</h3><p>Bold type, rough texture, and high-contrast composition for rooms that need a stronger voice.</p></div>
+              <div class="product-buy"><span>From $34</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="abstract">
+            <img class="product-image" src="./assets/drop-motion.png" alt="Black Motion abstract poster in a sunlit interior" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Abstract</span><h3>Black Motion</h3><p>Expressive brush strokes printed on textured paper with deep blacks and raw visual energy.</p></div>
+              <div class="product-buy"><span>From $42</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="architecture">
+            <img class="product-image" src="./assets/drop-light.png" alt="Light Shadow Balance architectural poster" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Architecture</span><h3>Light / Shadow / Balance</h3><p>A monochrome architectural print about silence, contrast, and the geometry of empty space.</p></div>
+              <div class="product-buy"><span>From $39</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="minimal">
+            <img class="product-image" src="./assets/drop-bauhaus.png" alt="Bauhaus Circle Study 1919 poster" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Bauhaus</span><h3>Circle Study 1919</h3><p>A modernist wall piece inspired by Bauhaus forms, strict geometry, and archival poster aesthetics.</p></div>
+              <div class="product-buy"><span>From $45</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="architecture">
+            <img class="product-image product-image--collage" src="./assets/hero-collage.png" alt="Concrete Rhythm architectural poster composition" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Architecture</span><h3>Concrete Rhythm</h3><p>Layered structures, sharp shadows, and bold forms shaped by modern space.</p></div>
+              <div class="product-buy"><span>From $44</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          <article class="product-card" data-category="typography">
+            <img class="product-image" src="./assets/collection-type.png" alt="Type Speaks typography poster in a sunlit interior" />
+            <div class="product-info">
+              <div class="product-copy"><span class="eyebrow">Typography</span><h3>Type Speaks</h3><p>Oversized letterforms and worn paper give this print a direct, unapologetic voice.</p></div>
+              <div class="product-buy"><span>From $36</span><a class="outline-link" href="#story">View print<img src="./assets/arrow-card.svg" alt="" /></a></div>
+            </div>
+          </article>
+          </div>
+        </div>
+        <div class="section-rule rail-scrollbar" data-scroller="product-scroller" role="scrollbar" tabindex="0" aria-label="Product carousel position" aria-controls="product-scroller" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="rail-scrollbar-thumb"></span></div>
+      </section>
+
+      <section class="paper-section quality" id="quality">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <div class="section-guides section-guides--offset" aria-hidden="true">
+          <img class="guide-v" src="./assets/line-vertical-2.svg" alt="" />
+          <img class="guide-h" src="./assets/line-horizontal.svg" alt="" />
+          <img class="guide-plus" src="./assets/plus-dark.svg" alt="" />
+        </div>
+        <header class="section-heading section-heading--large">
+          <h2>Made to look good<br />for years</h2>
+          <p>Every print is produced on textured paper with deep colours, clean edges, and a finish made for framing.</p>
+        </header>
+        <div class="feature-grid">
+          <article class="feature-card">
+            <img src="./assets/feature-paper.png" alt="Close-up of textured art paper" />
+            <div class="feature-overlay"><div><h3>Textured Paper</h3><p>Natural grain and premium matte finish.</p></div><a class="outline-link outline-link--light" href="#story">Learn<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="feature-card">
+            <img class="feature-shift-top" src="./assets/feature-ink.png" alt="Close-up of premium colour ink on paper" />
+            <div class="feature-overlay"><div><h3>Premium Ink</h3><p>High-quality inks with rich colors, deep contrast, and lasting detail.</p></div><a class="outline-link outline-link--light" href="#story">Learn<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="feature-card">
+            <img class="feature-shift-left" src="./assets/feature-frame.png" alt="Framed Plakat print in a calm interior" />
+            <div class="feature-overlay"><div><h3>Frame Ready</h3><p>Designed in standard formats to fit your space effortlessly.</p></div><a class="outline-link outline-link--light" href="#story">Learn<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="feature-card">
+            <img src="./assets/feature-packed.png" alt="A carefully packed Plakat print" />
+            <div class="feature-overlay"><div><h3>Carefully Packed</h3><p>Wrapped securely and prepared for a safe journey to your wall.</p></div><a class="outline-link outline-link--light" href="#story">Learn<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+        </div>
+      </section>
+
+      <section class="paper-section story" id="story">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <div class="section-guides section-guides--offset" aria-hidden="true">
+          <img class="guide-v" src="./assets/line-vertical-2.svg" alt="" />
+          <img class="guide-h" src="./assets/line-horizontal.svg" alt="" />
+          <img class="guide-plus" src="./assets/plus-dark.svg" alt="" />
+        </div>
+        <header class="section-heading section-heading--large story-heading">
+          <h2>Objects made for<br />spaces</h2>
+          <p>PLAKAT is a curated poster brand focused on<br />timeless aesthetics, carefully selected details,<br />and high-quality materials.<br /><br />We create limited art prints that bring character,<br />emotion, and identity into everyday spaces.</p>
+        </header>
+        <a class="outline-link story-link" href="#about-brand-modal" data-about-open>About our brand<img src="./assets/arrow-card.svg" alt="" /></a>
+        <div class="story-image"><img src="./assets/about-objects.png" alt="Plakat prints, packaging, stationery, and art objects" /></div>
+      </section>
+
+      <section class="paper-section collections" id="collections">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <div class="section-guides" aria-hidden="true">
+          <img class="guide-v" src="./assets/line-vertical-2.svg" alt="" />
+          <img class="guide-h" src="./assets/line-horizontal.svg" alt="" />
+          <img class="guide-plus" src="./assets/plus-dark.svg" alt="" />
+        </div>
+        <header class="section-heading section-heading--compact collections-heading">
+          <h2>Curated Collections</h2>
+          <p>Explore prints by mood, style, and the feeling you want your space to carry.</p>
+        </header>
+        <a class="outline-link collections-link" href="./collections.html">View all collections<img src="./assets/arrow-card.svg" alt="" /></a>
+        <div class="rail-scroller collection-scroller" id="collection-scroller" tabindex="0" aria-label="Scroll through curated collections">
+          <div class="collection-rail">
+          <article class="collection-card">
+            <div class="collection-image collection-image--type"><img src="./assets/collection-type.png" alt="Typography collection artwork" /></div>
+            <div class="collection-info"><h3>Typography</h3><p>Bold type-led posters<br class="mobile-break" /> for rooms that need<br class="mobile-break" /> a stronger voice.</p><a class="outline-link outline-link--light" href="./collection.html?slug=typography">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image collection-image--abstract"><img src="./assets/collection-abstract.png" alt="Abstract black brush marks" /></div>
+            <div class="collection-info"><h3>Abstract</h3><p>Expressive shapes, brush<br class="mobile-break" /> marks, and visual tension<br class="mobile-break" /> printed with raw character.</p><a class="outline-link outline-link--light" href="./collection.html?slug=abstract">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image collection-image--street"><img src="./assets/collection-street.png" alt="Street-inspired poster texture" /></div>
+            <div class="collection-info"><h3>Street</h3><p>Raw posters inspired by graffiti,<br class="mobile-break" /> city walls, stickers, and<br class="mobile-break" /> underground visual culture.</p><a class="outline-link outline-link--light" href="./collection.html?slug=street">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image collection-image--minimal"><img src="./assets/collection-minimal.png" alt="Minimal abstract composition" /></div>
+            <div class="collection-info"><h3>Minimal</h3><p>Clean compositions for<br class="mobile-break" /> calm interiors and<br class="mobile-break" /> focused spaces.</p><a class="outline-link outline-link--light" href="./collection.html?slug=minimal">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image collection-image--architecture"><img src="./assets/drop-light.png" alt="Architecture collection with dramatic light and geometric space" /></div>
+            <div class="collection-info"><h3>Architecture</h3><p>Monochrome structures,<br class="mobile-break" /> sharp light, and quiet geometry<br class="mobile-break" /> for considered spaces.</p><a class="outline-link outline-link--light" href="./collection.html?slug=architecture">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          <article class="collection-card">
+            <div class="collection-image collection-image--bauhaus"><img src="./assets/drop-bauhaus.png" alt="Bauhaus collection with circles and disciplined lines" /></div>
+            <div class="collection-info"><h3>Bauhaus</h3><p>Modernist circles,<br class="mobile-break" /> disciplined lines, and archival<br class="mobile-break" /> forms with lasting character.</p><a class="outline-link outline-link--light" href="./collection.html?slug=bauhaus">View collection<img src="./assets/arrow-card.svg" alt="" /></a></div>
+          </article>
+          </div>
+        </div>
+        <div class="section-rule section-rule--collections rail-scrollbar" data-scroller="collection-scroller" role="scrollbar" tabindex="0" aria-label="Collection carousel position" aria-controls="collection-scroller" aria-orientation="horizontal" aria-valuemin="0" aria-valuemax="100" aria-valuenow="0"><span class="rail-scrollbar-thumb"></span></div>
+      </section>
+
+      <section class="paper-section cta-section">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <div class="section-guides section-guides--offset" aria-hidden="true">
+          <img class="guide-v" src="./assets/line-vertical-2.svg" alt="" />
+          <img class="guide-h" src="./assets/line-horizontal.svg" alt="" />
+          <img class="guide-plus" src="./assets/plus-dark.svg" alt="" />
+        </div>
+        <div class="cta-panel">
+          <img class="dark-texture" src="./assets/paper-dark.png" alt="" />
+          <img class="cta-globe" src="./assets/globe-dark.svg" alt="" />
+          <div class="cta-copy">
+            <h2>Your walls deserve<br />a story.</h2>
+            <p>Limited posters crafted with texture, emotion, and timeless design.</p>
+            <div class="hero-actions">
+              <a class="button button--light button--medium" href="#drops"><span>Shop prints</span><img src="./assets/arrow-dark.svg" alt="" /></a>
+              <a class="button button--ghost button--medium" href="#drops">View drops</a>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <footer class="footer" id="footer">
+        <img class="dark-texture" src="./assets/paper-dark.png" alt="" />
+        <div class="footer-lines" aria-hidden="true">
+          <img src="./assets/lines-hero-a.svg" alt="" />
+          <img src="./assets/lines-hero-b.svg" alt="" />
+        </div>
+        <div class="footer-intro">
+          <a class="brand brand--light" href="#home"><img src="./assets/globe-footer.svg" alt="" /><span>Plakat</span></a>
+          <p>The place where walls find their character.<br />Premium art prints made with timeless design and attention to every detail.</p>
+        </div>
+        <div class="footer-column footer-shop"><h3>Shop</h3><a href="#drops">Passport</a><a href="#collections">Destination</a><a href="#home">Account</a></div>
+        <div class="footer-column footer-products"><h3>Products</h3><a href="#story" data-about-open>About Plakat</a><a href="#home">Press</a></div>
+        <div class="footer-column footer-support"><h3>Products</h3><a href="#home">Support</a><a href="#home">Help</a><a href="#home">Legals</a><a href="#home">Policies</a></div>
+        <div class="footer-column footer-partner"><h3>Partner</h3><a href="#home">For expert</a><a href="#home">For agency</a><a href="#home">For startup</a><a href="#home">For corporate</a></div>
+        <div class="footer-column footer-explore"><h3>Explore</h3><a href="#home">Compare</a><a href="#home">Community</a><a href="#home">Wishlist</a></div>
+        <div class="footer-social"><h3>Follow us</h3><div><a href="#home" aria-label="Instagram"><img src="./assets/social-instagram.svg" alt="" /></a><a href="#home" aria-label="Facebook"><img src="./assets/social-x.svg" alt="" /></a><a href="#home" aria-label="Telegram"><img src="./assets/social-dribbble-a.svg" alt="" /></a><a href="#home" aria-label="X"><img src="./assets/social-dribbble-b.svg" alt="" /></a></div></div>
+        <div class="footer-bottom"><span>Copyright © 2026 Plakat. All rights reserved.</span><span><a href="#home">Terms of Use</a>&nbsp;&nbsp;&amp;&nbsp;&nbsp;<a href="#home">Privacy Policy</a></span></div>
+      </footer>
+    </main>
+
+    <div class="product-modal" id="product-modal" hidden>
+      <button class="product-modal__backdrop" type="button" aria-label="Close product details" data-modal-close></button>
+      <section class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+        <button class="product-modal__close" type="button" aria-label="Close product details" data-modal-close>×</button>
+        <div class="product-modal__media">
+          <img id="product-modal-image" src="./assets/drop-noisy.png" alt="" />
+        </div>
+        <div class="product-modal__content">
+          <span class="product-modal__eyebrow" id="product-modal-category">Typography</span>
+          <h2 id="product-modal-title">Noisy Silence</h2>
+          <p class="product-modal__description" id="product-modal-description">Bold type, rough texture, and high-contrast composition for rooms that need a stronger voice.</p>
+          <div class="product-modal__price-row">
+            <strong id="product-modal-price">$34</strong>
+            <span>Fine art print<br />Unframed</span>
+          </div>
+          <fieldset class="product-modal__sizes">
+            <legend>Choose size</legend>
+            <label><input type="radio" name="print-size" value="A4" data-surcharge="0" checked /><span>A4<small>21 × 29.7 cm</small></span></label>
+            <label><input type="radio" name="print-size" value="A3" data-surcharge="8" /><span>A3<small>29.7 × 42 cm</small></span></label>
+            <label><input type="radio" name="print-size" value="A2" data-surcharge="18" /><span>A2<small>42 × 59.4 cm</small></span></label>
+          </fieldset>
+          <div class="product-modal__purchase">
+            <div class="quantity-control" aria-label="Quantity">
+              <button type="button" data-quantity="minus" aria-label="Decrease quantity">−</button>
+              <output id="product-modal-quantity">1</output>
+              <button type="button" data-quantity="plus" aria-label="Increase quantity">+</button>
+            </div>
+            <button class="product-modal__add" type="button"><span>Add to cart</span><span aria-hidden="true">→</span></button>
+          </div>
+          <p class="product-modal__note">Textured archival paper · Premium pigment ink · Ships in 2–4 business days</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="product-modal feature-modal" id="feature-modal" hidden>
+      <button class="product-modal__backdrop" type="button" aria-label="Close material details" data-feature-close></button>
+      <section class="product-modal__dialog feature-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="feature-modal-title">
+        <button class="product-modal__close" type="button" aria-label="Close material details" data-feature-close>×</button>
+        <div class="product-modal__media feature-modal__media">
+          <img id="feature-modal-image" src="./assets/feature-paper.png" alt="" />
+        </div>
+        <div class="product-modal__content feature-modal__content">
+          <span class="product-modal__eyebrow" id="feature-modal-category">Paper &amp; finish</span>
+          <h2 id="feature-modal-title">Textured Paper</h2>
+          <p class="product-modal__description feature-modal__lead" id="feature-modal-description">A tactile surface that gives every black, line, and quiet detail more depth.</p>
+          <div class="feature-modal__why">
+            <h3>Why it matters</h3>
+            <p id="feature-modal-why">The surface is part of the artwork. Its natural grain catches pigment softly and keeps large areas of colour rich rather than flat.</p>
+          </div>
+          <ul class="feature-modal__facts" id="feature-modal-facts">
+            <li>250 gsm archival stock</li>
+            <li>Acid-free and FSC-certified</li>
+            <li>Soft, natural matte grain</li>
+          </ul>
+          <a class="feature-modal__cta" href="#drops"><span>Explore prints</span><span aria-hidden="true">→</span></a>
+        </div>
+      </section>
+    </div>
+
+    <div class="product-modal about-brand-modal" id="about-brand-modal" hidden>
+      <button class="product-modal__backdrop" type="button" aria-label="Close brand story" data-about-close></button>
+      <section class="product-modal__dialog about-brand-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="about-brand-modal-title">
+        <button class="product-modal__close" type="button" aria-label="Close brand story" data-about-close>×</button>
+        <div class="product-modal__media about-brand-modal__media"><img src="./assets/about-objects.png" alt="Plakat prints, packaging, stationery, and art objects" /></div>
+        <div class="product-modal__content about-brand-modal__content">
+          <span class="product-modal__eyebrow">Independent art print studio</span>
+          <h2 id="about-brand-modal-title">Objects made for spaces.</h2>
+          <p class="product-modal__description about-brand-modal__lead">PLAKAT is an independent studio creating limited art prints for rooms that deserve more than decoration.</p>
+          <div class="about-brand-modal__copy">
+            <p>We make bold, tactile pieces that bring character, emotion, and identity into everyday spaces.</p>
+            <p>Each collection is kept deliberately small. We work with type, form, contrast, and negative space until every element feels necessary.</p>
+            <p>Every print is produced on textured archival paper with deep pigment and a finish made to last.</p>
+          </div>
+        </div>
+      </section>
+    </div>
+
+    <div class="cart-drawer" id="cart-drawer" hidden>
+      <button class="cart-drawer__backdrop" type="button" aria-label="Close cart" data-cart-close></button>
+      <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+        <header class="cart-drawer__header">
+          <div><span>Your selection</span><h2 id="cart-drawer-title">Cart <em id="cart-drawer-count">(0)</em></h2></div>
+          <button class="cart-drawer__close" type="button" aria-label="Close cart" data-cart-close>×</button>
+        </header>
+        <div class="cart-drawer__items" id="cart-drawer-items" aria-live="polite"></div>
+        <footer class="cart-drawer__summary">
+          <div><span>Subtotal</span><strong id="cart-drawer-subtotal">$0</strong></div>
+          <p>Shipping and taxes calculated at checkout.</p>
+          <button class="cart-drawer__buy" type="button" disabled><span>Buy now</span><span aria-hidden="true">→</span></button>
+        </footer>
+      </aside>
+    </div>
+
+    <script src="./script.js"></script>
+  </body>
+</html>

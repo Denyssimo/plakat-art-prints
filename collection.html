@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Explore a curated Plakat art print collection." />
+    <title>Collection — Plakat</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body class="catalog-page collection-page">
+    <main class="site-shell catalog-shell">
+      <header class="catalog-header" id="top">
+        <img class="dark-texture" src="./assets/paper-dark.png" alt="" />
+        <div class="hero-lines" aria-hidden="true"><img src="./assets/lines-hero-a.svg" alt="" /><img src="./assets/lines-hero-b.svg" alt="" /></div>
+        <div class="topbar catalog-topbar">
+          <a class="brand brand--light" href="./index.html#home" aria-label="Plakat home"><img src="./assets/globe.svg" alt="" /><span>Plakat</span></a>
+          <nav class="primary-nav" aria-label="Primary navigation">
+            <a href="./drops.html">Posters</a>
+            <a class="is-current" href="./collections.html">Collections</a>
+            <a href="./index.html#story">About</a>
+            <a href="./index.html#quality">Journal</a>
+            <a href="#footer">Contact</a>
+          </nav>
+          <a class="cart-link" href="#collection-grid">Cart (0)</a>
+        </div>
+      </header>
+
+      <section class="catalog-main collection-main" id="collection">
+        <div class="paper-texture" aria-hidden="true"></div>
+        <header class="catalog-heading collection-heading-page">
+          <a class="catalog-back" href="./collections.html">← Back to collections</a>
+          <span class="collection-kicker" id="collection-kicker">Curated collection</span>
+          <div class="catalog-heading__row">
+            <h1 id="collection-title">Typography</h1>
+            <p id="collection-description">Bold type-led posters for rooms that need a stronger voice.</p>
+          </div>
+        </header>
+
+        <div class="catalog-controls catalog-controls--collection">
+          <div class="collection-note"><span>Limited edition</span><span>Archival paper</span><span>Unframed</span></div>
+          <div class="catalog-controls__meta">
+            <span id="catalog-count">6 prints</span>
+            <label><span class="sr-only">Sort prints</span><select id="catalog-sort" aria-label="Sort prints"><option value="featured">Featured</option><option value="price-low">Price: low to high</option><option value="price-high">Price: high to low</option><option value="name">Name: A–Z</option></select></label>
+          </div>
+        </div>
+
+        <div class="catalog-grid collection-grid" id="catalog-grid" aria-live="polite"></div>
+      </section>
+
+      <footer class="footer" id="footer">
+        <img class="dark-texture" src="./assets/paper-dark.png" alt="" />
+        <div class="footer-lines" aria-hidden="true"><img src="./assets/lines-hero-a.svg" alt="" /><img src="./assets/lines-hero-b.svg" alt="" /></div>
+        <div class="footer-intro"><a class="brand brand--light" href="./index.html#home"><img src="./assets/globe-footer.svg" alt="" /><span>Plakat</span></a><p>The place where walls find their character.<br />Premium art prints made with timeless design and attention to every detail.</p></div>
+        <div class="footer-column footer-shop"><h3>Shop</h3><a href="./drops.html">All prints</a><a href="./collections.html">Collections</a><a href="./index.html#home">Account</a></div>
+        <div class="footer-column footer-products"><h3>Products</h3><a href="./index.html#story">About Plakat</a><a href="./index.html#home">Press</a></div>
+        <div class="footer-column footer-support"><h3>Products</h3><a href="./index.html#home">Support</a><a href="./index.html#home">Help</a><a href="./index.html#home">Legals</a><a href="./index.html#home">Policies</a></div>
+        <div class="footer-column footer-partner"><h3>Partner</h3><a href="./index.html#home">For expert</a><a href="./index.html#home">For agency</a><a href="./index.html#home">For startup</a><a href="./index.html#home">For corporate</a></div>
+        <div class="footer-column footer-explore"><h3>Explore</h3><a href="./drops.html">Compare</a><a href="./index.html#collections">Community</a><a href="./drops.html">Wishlist</a></div>
+        <div class="footer-social"><h3>Follow us</h3><div><a href="#top" aria-label="Instagram"><img src="./assets/social-instagram.svg" alt="" /></a><a href="#top" aria-label="Facebook"><img src="./assets/social-x.svg" alt="" /></a><a href="#top" aria-label="Telegram"><img src="./assets/social-dribbble-a.svg" alt="" /></a><a href="#top" aria-label="X"><img src="./assets/social-dribbble-b.svg" alt="" /></a></div></div>
+        <div class="footer-bottom"><span>Copyright © 2026 Plakat. All rights reserved.</span><span><a href="#top">Terms of Use</a>&nbsp;&nbsp;&amp;&nbsp;&nbsp;<a href="#top">Privacy Policy</a></span></div>
+      </footer>
+    </main>
+
+    <div class="product-modal" id="product-modal" hidden>
+      <button class="product-modal__backdrop" type="button" aria-label="Close product details" data-modal-close></button>
+      <section class="product-modal__dialog" role="dialog" aria-modal="true" aria-labelledby="product-modal-title">
+        <button class="product-modal__close" type="button" aria-label="Close product details" data-modal-close>×</button>
+        <div class="product-modal__media"><img id="product-modal-image" src="./assets/drop-noisy.png" alt="" /></div>
+        <div class="product-modal__content">
+          <span class="product-modal__eyebrow" id="product-modal-category">Typography</span><h2 id="product-modal-title">Noisy Silence</h2><p class="product-modal__description" id="product-modal-description">Limited art print on textured paper.</p>
+          <div class="product-modal__price-row"><strong id="product-modal-price">$34</strong><span>Fine art print<br />Unframed</span></div>
+          <fieldset class="product-modal__sizes"><legend>Choose size</legend><label><input type="radio" name="print-size" value="A4" data-surcharge="0" checked /><span>A4<small>21 × 29.7 cm</small></span></label><label><input type="radio" name="print-size" value="A3" data-surcharge="8" /><span>A3<small>29.7 × 42 cm</small></span></label><label><input type="radio" name="print-size" value="A2" data-surcharge="18" /><span>A2<small>42 × 59.4 cm</small></span></label></fieldset>
+          <div class="product-modal__purchase"><div class="quantity-control" aria-label="Quantity"><button type="button" data-quantity="minus" aria-label="Decrease quantity">−</button><output id="product-modal-quantity">1</output><button type="button" data-quantity="plus" aria-label="Increase quantity">+</button></div><button class="product-modal__add" type="button"><span>Add to cart</span><span aria-hidden="true">→</span></button></div>
+          <p class="product-modal__note">Textured archival paper · Premium pigment ink · Ships in 2–4 business days</p>
+        </div>
+      </section>
+    </div>
+
+    <div class="cart-drawer" id="cart-drawer" hidden>
+      <button class="cart-drawer__backdrop" type="button" aria-label="Close cart" data-cart-close></button>
+      <aside class="cart-drawer__panel" role="dialog" aria-modal="true" aria-labelledby="cart-drawer-title">
+        <header class="cart-drawer__header"><div><span>Your selection</span><h2 id="cart-drawer-title">Cart <em id="cart-drawer-count">(0)</em></h2></div><button class="cart-drawer__close" type="button" aria-label="Close cart" data-cart-close>×</button></header>
+        <div class="cart-drawer__items" id="cart-drawer-items" aria-live="polite"></div>
+        <footer class="cart-drawer__summary"><div><span>Subtotal</span><strong id="cart-drawer-subtotal">$0</strong></div><p>Shipping and taxes calculated at checkout.</p><button class="cart-drawer__buy" type="button" disabled><span>Buy now</span><span aria-hidden="true">→</span></button></footer>
+      </aside>
+    </div>
+
+    <script src="./collection.js"></script>
+    <script src="./script.js"></script>
+    <script src="./catalog.js"></script>
+  </body>
+</html>
