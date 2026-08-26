@@ -38,6 +38,40 @@ function updateScale() {
 updateScale();
 window.addEventListener("resize", updateScale, { passive: true });
 
+const mobileMenuToggle = document.querySelector(".mobile-menu-toggle");
+const primaryNavigation = document.querySelector(".primary-nav");
+
+function setMobileMenu(open) {
+  if (!mobileMenuToggle || !primaryNavigation) return;
+  mobileMenuToggle.setAttribute("aria-expanded", String(open));
+  mobileMenuToggle.setAttribute("aria-label", open ? "Close menu" : "Open menu");
+  primaryNavigation.classList.toggle("is-open", open);
+}
+
+if (mobileMenuToggle && primaryNavigation) {
+  mobileMenuToggle.addEventListener("click", () => {
+    setMobileMenu(mobileMenuToggle.getAttribute("aria-expanded") !== "true");
+  });
+
+  primaryNavigation.addEventListener("click", (event) => {
+    if (event.target.closest("a")) setMobileMenu(false);
+  });
+
+  document.addEventListener("pointerdown", (event) => {
+    if (mobileMenuToggle.getAttribute("aria-expanded") !== "true") return;
+    if (mobileMenuToggle.contains(event.target) || primaryNavigation.contains(event.target)) return;
+    setMobileMenu(false);
+  });
+
+  document.addEventListener("keydown", (event) => {
+    if (event.key === "Escape") setMobileMenu(false);
+  });
+
+  window.addEventListener("resize", () => {
+    if (window.innerWidth > 900) setMobileMenu(false);
+  }, { passive: true });
+}
+
 const finePointer = window.matchMedia("(hover: hover) and (pointer: fine)").matches;
 
 function setupCursorGrid(container, grid) {
