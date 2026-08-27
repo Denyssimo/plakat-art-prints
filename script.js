@@ -683,7 +683,6 @@ document.querySelectorAll(".rail-scroller").forEach((scroller) => {
     velocity = 0;
     hasDragged = false;
     scroller.classList.add("is-pointer-down");
-    scroller.setPointerCapture(pointerId);
   });
 
   scroller.addEventListener("pointermove", (event) => {
@@ -693,6 +692,7 @@ document.querySelectorAll(".rail-scroller").forEach((scroller) => {
     if (!hasDragged) {
       hasDragged = true;
       scroller.classList.add("is-dragging");
+      scroller.setPointerCapture(pointerId);
     }
 
     event.preventDefault();
