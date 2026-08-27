@@ -674,7 +674,6 @@ document.querySelectorAll(".rail-scroller").forEach((scroller) => {
 
   scroller.addEventListener("pointerdown", (event) => {
     if (event.button !== 0 || event.pointerType === "touch") return;
-    event.preventDefault();
     stopMomentum();
     pointerId = event.pointerId;
     startX = event.clientX;
