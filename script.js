@@ -291,11 +291,11 @@ function closeProductModal() {
   else closeTimer = window.setTimeout(finish, 280);
 }
 
-document.querySelectorAll(".product-card .outline-link").forEach((link) => {
-  link.addEventListener("click", (event) => {
-    event.preventDefault();
-    openProductModal(link.closest(".product-card"), link);
-  });
+document.addEventListener("click", (event) => {
+  const link = event.target.closest?.(".product-card .outline-link");
+  if (!link) return;
+  event.preventDefault();
+  openProductModal(link.closest(".product-card"), link);
 });
 
 productModal?.querySelectorAll("[data-modal-close]").forEach((button) => button.addEventListener("click", closeProductModal));
