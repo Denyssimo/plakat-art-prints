@@ -615,6 +615,7 @@ img { display: block; }
 
 @media (max-width: 900px) {
   .catalog-header { height: 92px; overflow: visible; }
+  .catalog-header::after { inset: 0; }
   .catalog-main { min-height: 0; padding: 56px 24px 90px; }
   .catalog-guide { display: none; }
   .catalog-heading__row { margin-top: 28px; display: block; }
