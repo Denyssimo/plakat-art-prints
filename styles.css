@@ -614,7 +614,7 @@ img { display: block; }
 }
 
 @media (max-width: 900px) {
-  .catalog-header { height: 92px; }
+  .catalog-header { height: 92px; overflow: visible; }
   .catalog-main { min-height: 0; padding: 56px 24px 90px; }
   .catalog-guide { display: none; }
   .catalog-heading__row { margin-top: 28px; display: block; }
@@ -722,7 +722,7 @@ img { display: block; }
   }
 
   .hero-copy h2 {
-    margin-top: 92px;
+    margin-top: 58px;
     font-size: var(--mobile-title-size);
     line-height: .98;
   }
