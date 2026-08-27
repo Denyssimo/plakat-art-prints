@@ -627,33 +627,105 @@ function setupRailScrollbar(scrollbar) {
 document.querySelectorAll(".rail-scrollbar").forEach(setupRailScrollbar);
 
 document.querySelectorAll(".rail-scroller").forEach((scroller) => {
+  scroller.querySelectorAll("a, img").forEach((element) => element.setAttribute("draggable", "false"));
   let pointerId = null;
   let startX = 0;
   let startScroll = 0;
+  let lastX = 0;
+  let lastTime = 0;
+  let velocity = 0;
+  let hasDragged = false;
+  let suppressClick = false;
+  let momentumFrame = 0;
+
+  const stopMomentum = () => {
+    if (momentumFrame) cancelAnimationFrame(momentumFrame);
+    momentumFrame = 0;
+    scroller.classList.remove("is-settling");
+  };
+
+  const startMomentum = () => {
+    if (reducedMotion || Math.abs(velocity) < 0.02) {
+      scroller.classList.remove("is-settling");
+      return;
+    }
+
+    scroller.classList.add("is-settling");
+    let frameTime = performance.now();
+
+    const glide = (now) => {
+      const delta = Math.min(32, now - frameTime);
+      frameTime = now;
+      const before = scroller.scrollLeft;
+      scroller.scrollLeft += velocity * delta;
+      velocity *= Math.pow(0.92, delta / 16.67);
+
+      const reachedEdge = Math.abs(scroller.scrollLeft - before) < 0.1;
+      if (Math.abs(velocity) > 0.02 && !reachedEdge) {
+        momentumFrame = requestAnimationFrame(glide);
+      } else {
+        momentumFrame = 0;
+        scroller.classList.remove("is-settling");
+      }
+    };
+
+    momentumFrame = requestAnimationFrame(glide);
+  };
 
   scroller.addEventListener("pointerdown", (event) => {
-    if (event.button !== 0 || event.target.closest("a, button")) return;
+    if (event.button !== 0 || event.pointerType === "touch") return;
+    event.preventDefault();
+    stopMomentum();
     pointerId = event.pointerId;
     startX = event.clientX;
     startScroll = scroller.scrollLeft;
+    lastX = event.clientX;
+    lastTime = performance.now();
+    velocity = 0;
+    hasDragged = false;
+    scroller.classList.add("is-pointer-down");
     scroller.setPointerCapture(pointerId);
   });
 
   scroller.addEventListener("pointermove", (event) => {
     if (event.pointerId !== pointerId) return;
     const distance = event.clientX - startX;
-    if (Math.abs(distance) > 3) scroller.classList.add("is-dragging");
+    if (!hasDragged && Math.abs(distance) <= 4) return;
+    if (!hasDragged) {
+      hasDragged = true;
+      scroller.classList.add("is-dragging");
+    }
+
+    event.preventDefault();
     scroller.scrollLeft = startScroll - distance;
+    const now = performance.now();
+    const deltaTime = Math.max(1, now - lastTime);
+    const instantVelocity = -(event.clientX - lastX) / deltaTime;
+    velocity = Math.max(-2.4, Math.min(2.4, velocity * 0.65 + instantVelocity * 0.35));
+    lastX = event.clientX;
+    lastTime = now;
   });
 
-  const stopDragging = (event) => {
+  const stopDragging = (event, cancelled = false) => {
     if (event.pointerId !== pointerId) return;
+    const dragged = hasDragged;
     pointerId = null;
-    requestAnimationFrame(() => scroller.classList.remove("is-dragging"));
+    scroller.classList.remove("is-pointer-down", "is-dragging");
+    if (dragged) {
+      suppressClick = true;
+      requestAnimationFrame(() => { suppressClick = false; });
+      if (!cancelled) startMomentum();
+    }
   };
 
   scroller.addEventListener("pointerup", stopDragging);
-  scroller.addEventListener("pointercancel", stopDragging);
+  scroller.addEventListener("pointercancel", (event) => stopDragging(event, true));
+  scroller.addEventListener("click", (event) => {
+    if (!suppressClick) return;
+    event.preventDefault();
+    event.stopImmediatePropagation();
+    suppressClick = false;
+  }, true);
 });
 
 const revealSets = [
